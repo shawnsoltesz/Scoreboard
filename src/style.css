@@ -61,21 +61,31 @@ fieldset i {
   margin: 0 0.2rem;
 }
 
-fieldset i.add:hover {
-  color: rgb(1, 59, 1);
-  cursor: pointer;
-}
-
 fieldset i.add {
-  color: green;
+  color: rgb(2, 157, 2);
   cursor: pointer;
 }
 
+fieldset i.add:hover {
+  color: rgb(3, 123, 3);
+  cursor: pointer;
+}
+
+fieldset i.add:active {
+  color: rgb(2, 60, 2);
+  cursor: pointer;
+}
+
+fieldset i.subtract {
+  color: #f64545;
+  cursor: pointer;
+}
 fieldset i.subtract:hover {
   color: #8e2727;
   cursor: pointer;
 }
-fieldset i.subtract {
-  color: #f64545;
+
+fieldset i.subtract:active {
+  color: #280b0b;
   cursor: pointer;
 }
