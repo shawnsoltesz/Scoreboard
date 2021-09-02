@@ -9,18 +9,31 @@ let playerTwoScore = 0
 
 // // constructor(playerOneName, playerTwoName, onScoreChange)
 
-function handleScoreClick() {
+function handleClick() {
   window.alert('You did it!')
 }
 
-// // inputElement.addEventListener('click', handleScoreClick)
+// const nameField = document.querySelector('input')
 
-// // nameField.addEventListener('click', handleScoreClick)
+// nameField.addEventListener('click', handleClick)
 
 const addButton = document.querySelector('i.add')
 
-addButton.addEventListener('click', handleScoreClick)
+addButton.addEventListener('click', handleClick)
 
 const deleteButton = document.querySelector('i.subtract')
 
-deleteButton.addEventListener('click', handleScoreClick)
+deleteButton.addEventListener('click', handleClick)
+
+//Notes
+
+// I can't drill into the Team 2 buttons -
+// tried to add an s to the "add" and "subtract" prefix to class
+// and create new plural const.
+
+// I can't update the 0 in the <h3> as a value - i could initialize
+// <h3> and set to a value other than 0. But it remained as 0
+// in the Console properties when console.log.
+
+// When adding code to eliminate null on const variables, the
+// window.alert stops working.
