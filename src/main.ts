@@ -7,10 +7,18 @@ let teamTwoScore = 0
 const teamOneAddButton = document.querySelector('.team1 i.add')
 
 function handleClickOnTeamOneAddButton() {
+  if (teamOneScore >= 21) {
+    return
+  }
+
   teamOneScore++
 
   if (teamOneScoreDisplay) {
     teamOneScoreDisplay.textContent = `${teamOneScore}`
+  }
+
+  if (teamOneScore >= 21) {
+    window.alert('Team 1 Won!!')
   }
 }
 
@@ -42,10 +50,18 @@ const teamOneScoreDisplay = document.querySelector('.team1 h3')
 const teamTwoAddButton = document.querySelector('.team2 i.add')
 
 function handleClickOnTeamTwoAddButton() {
+  if (teamTwoScore >= 21) {
+    return
+  }
+
   teamTwoScore++
 
   if (teamTwoScoreDisplay) {
     teamTwoScoreDisplay.textContent = `${teamTwoScore}`
+  }
+
+  if (teamTwoScore >= 21) {
+    window.alert('Team 2 Won!!')
   }
 }
 
