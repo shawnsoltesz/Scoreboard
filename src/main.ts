@@ -1,34 +1,38 @@
 import './style.css'
 
-let playerOneScore = 0
-let playerTwoScore = 0
+let teamOneScore = 0
+let teamTwoScore = 0
 
-// // ScoreboardView
-
-// // const thingClickedOn = event.target
-
-//function handleClick() {
-//  window.alert('You did it!')
-//}
-
-// const nameField = document.querySelector('input')
-
-// nameField.addEventListener('click', handleClick)
-
+//Team One + Button
 const teamOneAddButton = document.querySelector('i.add')
 
 function handleClickOnTeamOneAddButton() {
-  console.log('I clicked on Team One Plus Button')
+  teamOneScore++
+
+  if (teamOneScoreDisplay) {
+    teamOneScoreDisplay.textContent = `${teamOneScore}`
+  }
 }
 
 teamOneAddButton?.addEventListener('click', handleClickOnTeamOneAddButton)
 
+//Team One - Button
+
 const teamOneDeleteButton = document.querySelector('i.subtract')
 
 function handleClickOnTeamOneDeleteButton() {
-  console.log('I clicked on team one minus button')
+  if (teamOneScore <= 0) {
+    return
+  }
+  teamOneScore--
+
+  if (teamOneScoreDisplay) {
+    teamOneScoreDisplay.textContent = `${teamOneScore}`
+  }
 }
 
 teamOneDeleteButton?.addEventListener('click', handleClickOnTeamOneDeleteButton)
 
-//const teamOneScore = document.querySelector('h3')
+//H3 Score
+
+const teamOneScoreDisplay = document.querySelector('h3')
