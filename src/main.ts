@@ -3,7 +3,11 @@ import './style.css'
 let teamOneScore = 0
 let teamTwoScore = 0
 
-//Team One + Button
+//Team 1 H3 Score
+
+const teamOneScoreDisplay = document.querySelector('.team1 h3')
+
+//Team One Add Button
 const teamOneAddButton = document.querySelector('.team1 i.add')
 
 function handleClickOnTeamOneAddButton() {
@@ -24,7 +28,7 @@ function handleClickOnTeamOneAddButton() {
 
 teamOneAddButton?.addEventListener('click', handleClickOnTeamOneAddButton)
 
-//Team One - Button
+//Team One Delete Button
 
 const teamOneDeleteButton = document.querySelector('.team1 i.subtract')
 
@@ -41,11 +45,27 @@ function handleClickOnTeamOneDeleteButton() {
 
 teamOneDeleteButton?.addEventListener('click', handleClickOnTeamOneDeleteButton)
 
-//Team 2 H3 Score
+//Team One Name Input/Display
 
-const teamOneScoreDisplay = document.querySelector('.team1 h3')
+const teamOneNameDisplay = document.querySelector('.team1 h2')
 
-//Team Two + Button
+const teamOneNameInput = document.querySelector('.team1 input')
+
+function teamOneNameInputChanged(event: any) {
+  const inputThatWasChanged = event.target
+
+  if (inputThatWasChanged instanceof HTMLInputElement) {
+    const textThatWasInput = inputThatWasChanged.value
+
+    if (teamOneNameDisplay) {
+      teamOneNameDisplay.textContent = textThatWasInput
+    }
+  }
+}
+
+teamOneNameInput?.addEventListener('input', teamOneNameInputChanged)
+
+//Team Two Add Button
 
 const teamTwoAddButton = document.querySelector('.team2 i.add')
 
@@ -65,7 +85,7 @@ function handleClickOnTeamTwoAddButton() {
   }
 }
 
-//Team Two - Button
+//Team Two Delete Button
 
 const teamTwoDeleteButton = document.querySelector('.team2 i.subtract')
 
@@ -88,6 +108,25 @@ const teamTwoScoreDisplay = document.querySelector('.team2 h3')
 
 teamTwoAddButton?.addEventListener('click', handleClickOnTeamTwoAddButton)
 
+//Team Two Name Input/Display
+
+const teamTwoNameDisplay = document.querySelector('.team2 h2')
+
+const teamTwoNameInput = document.querySelector('.team2 input')
+
+function teamTwoNameInputChanged(event: any) {
+  const inputThatWasChanged = event.target
+
+  if (inputThatWasChanged instanceof HTMLInputElement) {
+    const textThatWasInput = inputThatWasChanged.value
+
+    if (teamTwoNameDisplay) {
+      teamTwoNameDisplay.textContent = textThatWasInput
+    }
+  }
+}
+teamTwoNameInput?.addEventListener('input', teamTwoNameInputChanged)
+
 //Reset button
 
 const resetButton = document.querySelector('aside h3')
@@ -102,6 +141,20 @@ function handleClickOnResetButton() {
   if (teamTwoScoreDisplay) {
     teamTwoScoreDisplay.textContent = `${teamTwoScore}`
   }
-}
 
+  if (teamOneNameDisplay) {
+    teamOneNameDisplay.textContent = 'Team 1'
+  }
+
+  if (teamTwoNameDisplay) {
+    teamTwoNameDisplay.textContent = 'Team 2'
+  }
+  if (teamOneNameInput) {
+    teamOneNameInput.textContent = 'Name'
+  }
+
+  if (teamTwoNameInput) {
+    teamTwoNameInput.textContent = 'Name'
+  }
+}
 resetButton?.addEventListener('click', handleClickOnResetButton)
