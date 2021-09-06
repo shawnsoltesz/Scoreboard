@@ -18,6 +18,49 @@ h1 {
   font-family: Monospace;
   margin: 1rem 0 3rem 0;
 }
+aside h3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Monospace;
+  padding: 1rem;
+  margin-left: 34rem;
+  margin-right: 34rem;
+  margin-bottom: 4rem;
+  border: thin solid #7c7c7c;
+  border-radius: 0.3rem;
+  background-color: #dad5d5;
+  cursor: pointer;
+}
+
+aside h3:hover {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Monospace;
+  padding: 1rem;
+  margin-left: 34rem;
+  margin-right: 34rem;
+  margin-bottom: 4rem;
+  border: thin solid #7c7c7c;
+  border-radius: 0.3rem;
+  background-color: #939090;
+}
+
+aside h3:active {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Monospace;
+  padding: 1rem;
+  margin-left: 34rem;
+  margin-right: 34rem;
+  margin-bottom: 4rem;
+  border: thin solid #7c7c7c;
+  border-radius: 0.3rem;
+  background-color: #5b5b5b;
+  color: white;
+}
 
 main {
   display: flex;
@@ -30,6 +73,7 @@ section {
   border: thin solid #7c7c7c;
   border-radius: 0.3rem;
   margin-bottom: 3rem;
+  background-color: #dad5d5;
 
   display: flex;
   flex-direction: column;

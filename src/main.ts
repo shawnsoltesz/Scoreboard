@@ -71,3 +71,13 @@ teamTwoDeleteButton?.addEventListener('click', handleClickOnTeamTwoDeleteButton)
 const teamTwoScoreDisplay = document.querySelector('.team2 h3')
 
 teamTwoAddButton?.addEventListener('click', handleClickOnTeamTwoAddButton)
+
+//Reset button
+
+const resetButton = document.querySelector('aside h3')
+
+function handleClickOnResetButton() {
+  console.log('Reset Button')
+}
+
+resetButton?.addEventListener('click', handleClickOnResetButton)
