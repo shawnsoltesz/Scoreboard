@@ -7,33 +7,28 @@ let playerTwoScore = 0
 
 // // const thingClickedOn = event.target
 
-// // constructor(playerOneName, playerTwoName, onScoreChange)
-
-function handleClick() {
-  window.alert('You did it!')
-}
+//function handleClick() {
+//  window.alert('You did it!')
+//}
 
 // const nameField = document.querySelector('input')
 
 // nameField.addEventListener('click', handleClick)
 
-const addButton = document.querySelector('i.add')
+const teamOneAddButton = document.querySelector('i.add')
 
-addButton.addEventListener('click', handleClick)
+function handleClickOnTeamOneAddButton() {
+  console.log('I clicked on Team One Plus Button')
+}
 
-const deleteButton = document.querySelector('i.subtract')
+teamOneAddButton?.addEventListener('click', handleClickOnTeamOneAddButton)
 
-deleteButton.addEventListener('click', handleClick)
+const teamOneDeleteButton = document.querySelector('i.subtract')
 
-//Notes
+function handleClickOnTeamOneDeleteButton() {
+  console.log('I clicked on team one minus button')
+}
 
-// I can't drill into the Team 2 buttons -
-// tried to add an s to the "add" and "subtract" prefix to class
-// and create new plural const.
+teamOneDeleteButton?.addEventListener('click', handleClickOnTeamOneDeleteButton)
 
-// I can't update the 0 in the <h3> as a value - i could initialize
-// <h3> and set to a value other than 0. But it remained as 0
-// in the Console properties when console.log.
-
-// When adding code to eliminate null on const variables, the
-// window.alert stops working.
+//const teamOneScore = document.querySelector('h3')
